@@ -38,38 +38,42 @@
         
     </head>
     <body ng-app="capital" ng-strict-di>
-        <header>
-            <div class="navbar-header">
-                <div class="navbar-brand">
-                    <a ui-sref="public.home"><img src="public/images/CAPITAL.jpeg" width="90%"></a>
+        <!-- <header> -->
+        <nav id="navHeader">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <div class="navbar-brand">
+                        <a ui-sref="public.home"><img src="public/images/CAPITAL.jpeg" width="90%"></a>
+                    </div>
+                    <button id="navbarToggle" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-list" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
                 </div>
-                <button id="navbarToggle" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-list" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
+                <div class="collapse navbar-collapse" id="navbar-list">
+                    <ul class="nav navbar-nav navbar-right" id="navbarL">
+                        <li ui-sref-active="active">
+                            <a ui-sref="public.us">NOSOTROS</a>
+                        </li>
+                        <li>
+                            <a ui-sref="public.funds">FONDOS DE INVERSIÓN</a>
+                        </li>
+                        <li>
+                            <a ui-sref="public.financing">FINANCIAMIENTO PARA EMPRESAS</a> 
+                        </li>
+                        <li>
+                            <a ui-sref="public.education">EDUCACIÓN BURSATIL</a>
+                        </li>
+                        <li>
+                            <a ui-sref="public.contact">CONTACTO</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class="collapse navbar-collapse" id="navbar-list">
-                <ul class="nav navbar-nav navbar-right" id="navbarL">
-                    <li ui-sref-active="active">
-                        <a ui-sref="public.us">NOSOTROS</a>
-                    </li>
-                    <li>
-                        <a ui-sref="public.funds">FONDOS DE INVERSIÓN</a>
-                    </li>
-                    <li>
-                        <a ui-sref="public.financing">FINANCIAMIENTO PARA EMPRESAS</a> 
-                    </li>
-                    <li>
-                        <a ui-sref="public.education">EDUCACIÓN BURSATIL</a>
-                    </li>
-                    <li>
-                        <a ui-sref="public.contact">CONTACTO</a>
-                    </li>
-                </ul>
-            </div>
-        </header>
+        </nav>
+        <!-- </header> -->
         <ui-view id="uiview">
             <div style="text-align: center;">
                 <h2>Cargando...</h2>
