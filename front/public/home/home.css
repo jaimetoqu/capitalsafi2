@@ -4,6 +4,8 @@
 #ficHome img {
     width: 400px;
     height: 300px;
+    margin-right: 16px;
+    margin-bottom: 16px;
 }
 #homeM {
     text-align: center;
